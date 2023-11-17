@@ -13,10 +13,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.CrisisService = void 0;
 const typeorm_1 = require("typeorm");
 const CrisisRepository_1 = require("../dao/CrisisRepository");
+const xstate_1 = require("xstate");
+const crisisManagementMachine_1 = require("../stateMachines/crisisManagementMachine");
 class CrisisService {
     constructor() {
         this.crisisRepository = (0, typeorm_1.getCustomRepository)(CrisisRepository_1.CrisisRepository);
-        // Additional service methods...
+        this.service = (0, xstate_1.interpret)(crisisManagementMachine_1.crisisManagementMachine)
+            .onTransition((state) => console.log(state.value))
+            .start();
     }
     getActiveCrisis() {
         return __awaiter(this, void 0, void 0, function* () {

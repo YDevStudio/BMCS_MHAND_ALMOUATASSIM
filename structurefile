@@ -1,0 +1,68 @@
+C:.
+│   jest.config.js
+│   ormconfig.js
+│   ormconfig.ts
+│   package-lock.json
+│   package.json
+│   tsconfig.json
+│
+├───dist
+│   │   ormconfig.js
+│   │
+│   └───src
+│       │   app.js
+│       │   server.js
+│       │
+│       ├───controllers
+│       │       CrisisController.js
+│       │
+│       ├───dao
+│       │       CrisisRepository.js
+│       │
+│       ├───models
+│       │       Crisis.js
+│       │       FireTruck.js
+│       │       FireTruckInCrisis.js
+│       │       PoliceVehicle.js
+│       │       PoliceVehicleInCrisis.js
+│       │       Route.js
+│       │
+│       ├───services
+│       │       CrisisService.js
+│       │
+│       ├───stateMachines
+│       │       crisisManagementMachine.js
+│       │
+│       └───tests
+│               Crisis.test.js
+│
+└───src
+    │   app.ts
+    │   server.ts
+    │
+    ├───controllers
+    │       CrisisController.ts
+    │
+    ├───dao
+    │       CrisisRepository.ts
+    │
+    ├───database
+    │       bmcs_database.db
+    │
+    ├───models
+    │       Crisis.ts
+    │       FireTruck.ts
+    │       FireTruckInCrisis.ts
+    │       PoliceVehicle.ts
+    │       PoliceVehicleInCrisis.ts
+    │       Route.ts
+    │
+    ├───routes
+    ├───services
+    │       CrisisService.ts
+    │
+    ├───stateMachines
+    │       crisisManagementMachine.ts
+    │
+    └───tests
+            Crisis.test.ts
