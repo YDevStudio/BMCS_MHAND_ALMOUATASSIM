@@ -1,7 +1,7 @@
 // src/controllers/CrisisController.ts
 
 import { Request, Response } from 'express';
-import { CrisisService } from '../services/CrisisService';
+import { CrisisService } from '../services/Crisis_Service';
 
 export class CrisisController {
   private crisisService = new CrisisService();

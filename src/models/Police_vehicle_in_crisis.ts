@@ -1,29 +1,29 @@
 import { Entity, PrimaryColumn, Column, ManyToOne, JoinColumn } from "typeorm";
 import { Crisis } from "./Crisis";
-import { FireTruck } from "./FireTruck";
+import { Police_vehicle } from "./Police_vehicle";
 import { Route } from "./Route";
 
 @Entity()
-export class FireTruckInCrisis {
+export class PoliceVehicleInCrisis {
   @PrimaryColumn()
   crisis_id?: number;
 
   @PrimaryColumn()
-  fire_truck_name?: string;
+  police_vehicle_name?: string;
 
   @Column()
   route_name?: string;
 
   @Column()
-  fire_truck_status?: string;
+  police_vehicle_status?: string;
 
   @ManyToOne(() => Crisis)
   @JoinColumn({ name: "crisis_id" })
   crisis?: Crisis;
 
-  @ManyToOne(() => FireTruck)
-  @JoinColumn({ name: "fire_truck_name" })
-  fireTruck?: FireTruck;
+  @ManyToOne(() => Police_vehicle)
+  @JoinColumn({ name: "police_vehicle_name" })
+  policeVehicle?: Police_vehicle;
 
   @ManyToOne(() => Route)
   @JoinColumn({ name: "route_name" })

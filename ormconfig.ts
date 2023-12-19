@@ -1,5 +1,5 @@
 import { ConnectionOptions } from 'typeorm';
-console.log("Using ormconfig.ts for database configuration");
+// console.log("Using ormconfig.ts for database configuration");
 
 const config: ConnectionOptions = {
   type: 'sqlite',
